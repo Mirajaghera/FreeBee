@@ -9,14 +9,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React, { useState, useEffect, useContext } from 'react';
-import splacedScreen from './3Nested_Screens_practice/SplacedScreen';
-import logginScreen from './3Nested_Screens_practice/logginScreen';
-import signUpScreen from './3Nested_Screens_practice/signUpScreen';
-import ForgotPassword from './3Nested_Screens_practice/ForgotPassword';
-import welcomeScreen from './3Nested_Screens_practice/welcomeScreen';
-import onbordeingscreen from './3Nested_Screens_practice/onbordeingscreen';
+import splacedScreen from './Nested_Screens_practice/SplacedScreen';
+import logginScreen from './Nested_Screens_practice/logginScreen';
+import signUpScreen from './Nested_Screens_practice/signUpScreen';
+import ForgotPassword from './Nested_Screens_practice/ForgotPassword';
+import welcomeScreen from './Nested_Screens_practice/welcomeScreen';
+import onbordeingscreen from './Nested_Screens_practice/onbordeingscreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import PaymentBillingScreen from './3Nested_Screens_practice/PaymentBilling';
+import PaymentBillingScreen from './Nested_Screens_practice/PaymentBilling';
 import {
   createStaticNavigation,
   NavigationContainer,
@@ -27,12 +27,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   AuthContext,
   AuthProvider,
-} from './3Nested_Screens_practice/AuthContext';
-import groceryScreen from './3Nested_Screens_practice/groceryScreen ';
-import carScreen from './3Nested_Screens_practice/carScreen';
-import accountScreen from './3Nested_Screens_practice/accountScreen';
-import { CartProvider } from './3Nested_Screens_practice/CartContext';
-import ordered from './3Nested_Screens_practice/ordered';
+} from './Nested_Screens_practice/AuthContext';
+import groceryScreen from './Nested_Screens_practice/groceryScreen ';
+import carScreen from './Nested_Screens_practice/carScreen';
+import accountScreen from './Nested_Screens_practice/accountScreen';
+import { CartProvider } from './Nested_Screens_practice/CartContext';
+import ordered from './Nested_Screens_practice/ordered';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -48,12 +48,7 @@ const Tab = createBottomTabNavigator();
 //   },
 // });
 
-const TabBarButton = props => (
-  <TouchableOpacity
-    {...props}
-    activeOpacity={1} // Prevents the default ripple effect
-  />
-);
+const TabBarButton = props => <TouchableOpacity {...props} activeOpacity={1} />;
 
 function Homescreen() {
   return (
@@ -62,7 +57,7 @@ function Homescreen() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          height: 38,
+          height: 20,
           paddingTop: 4,
           alignItems: 'center',
           backgroundColor: 'white',
@@ -89,8 +84,8 @@ function Homescreen() {
               style={{ height: 24, width: 24 }} // Adjusted size
               source={
                 focused
-                  ? require('./3Nested_Screens_practice/Images/icons8-home-10.png')
-                  : require('./3Nested_Screens_practice/Images/icons8-home-100.png')
+                  ? require('./Nested_Screens_practice/Images/icons8-home-10.png')
+                  : require('./Nested_Screens_practice/Images/icons8-home-100.png')
               }
             />
           ),
@@ -106,8 +101,8 @@ function Homescreen() {
               style={{ height: 24, width: 24 }} // Adjusted size
               source={
                 focused
-                  ? require('./3Nested_Screens_practice/Images/icons8-grocery-10.png')
-                  : require('./3Nested_Screens_practice/Images/icons8-grocery-100.png')
+                  ? require('./Nested_Screens_practice/Images/icons8-grocery-10.png')
+                  : require('./Nested_Screens_practice/Images/icons8-grocery-100.png')
               }
             />
           ),
@@ -123,8 +118,8 @@ function Homescreen() {
               style={{ height: 24, width: 24 }} // Adjusted size
               source={
                 focused
-                  ? require('./3Nested_Screens_practice/Images/icons8-cart-10.png')
-                  : require('./3Nested_Screens_practice/Images/icons8-cart-100.png')
+                  ? require('./Nested_Screens_practice/Images/icons8-cart-10.png')
+                  : require('./Nested_Screens_practice/Images/icons8-cart-100.png')
               }
             />
           ),
@@ -140,8 +135,8 @@ function Homescreen() {
               style={{ height: 24, width: 24 }} // Adjusted size
               source={
                 focused
-                  ? require('./3Nested_Screens_practice/Images/icons8-user-10.png')
-                  : require('./3Nested_Screens_practice/Images/icons8-user-100.png')
+                  ? require('./Nested_Screens_practice/Images/icons8-user-10.png')
+                  : require('./Nested_Screens_practice/Images/icons8-user-100.png')
               }
             />
           ),
